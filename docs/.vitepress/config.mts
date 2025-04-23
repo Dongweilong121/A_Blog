@@ -3,32 +3,37 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
+
   title: "Ly Learning Blog",
   description: "Ly Learning Blog",
+
   srcDir: 'src',
   base: '/A_Blog/',
+  head: [['link', { rel: 'icon', href: 'favicon.ico' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: { light: '/images/LyLight.png', dark: '/images/LyDark.png' },
+    logo: { light: 'LyLight.png', dark: 'LyDark.png' },
     nav: [
       { text: '首页', link: '/' },
       // { text: 'Examples', link: '/markdown-examples' }
       {
-        text: 'Python', items: [
-          { text: 'Learning', link: '/python/learning' }
-        ]
+        text: 'Python',
+        link: '/python/'
       }
     ],
 
-    // sidebar: [
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
-    //       { text: 'Runtime API Examples', link: '/api-examples' }
-    //     ]
-    //   }
-    // ],
+    sidebar: [
+      {
+        text: '基础',
+        collapsed: false,
+
+        items: [
+          { text: '基础语法', link: '/python/base' },
+          { text: 'Runtime API Examples', link: '/api-examples' }
+        ]
+      }
+    ],
+    // aside: false,
 
     // socialLinks: [
     //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }

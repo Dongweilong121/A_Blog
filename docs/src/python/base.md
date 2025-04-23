@@ -1,0 +1,73 @@
+# 基础语法
+
+
+## Python类、`__init__`和`self`问答文档
+
+### Q1: Python中的类和`__init__`、`self`有什么关系？
+
+#### 回答：
+在Python中：
+1. **类(Class)** 是创建对象的蓝图/模板
+2. **`__init__`** 是类的构造方法，在创建实例时自动调用
+3. **`self`** 代表类的当前实例，用于访问实例属性和方法
+
+三者关系图示：
+
+
+
+### Q2: 为什么每个方法都要定义`self`参数？
+
+#### 回答：
+主要原因包括：
+1. **实例标识**：明确操作哪个实例
+2. **方法调用机制**：Python自动将实例作为`self`传入
+3. **访问实例变量**：通过`self`访问实例特有属性
+4. **显式优于隐式**：清晰区分实例变量和局部变量
+
+例外情况：
+- `@staticmethod`不需要`self`
+- `@classmethod`使用`cls`参数
+
+### Q3: 能否展示实际应用示例？
+
+#### 回答：
+##### 示例1：用户管理系统
+```python
+class User:
+    def __init__(self, username, email):
+        self.username = username
+        self.email = email
+        self.is_active = True
+    
+    def deactivate(self):
+        self.is_active = False
+        print(f"{self.username}已停用")
+
+# 使用
+user = User("张三", "zhang@example.com")
+user.deactivate()
+
+
+
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+    
+    def apply_discount(self, percent):
+        self.price *= (1 - percent/100)
+
+# 使用
+book = Product("Python入门", 100)
+book.apply_discount(20)  # 打8折
+
+
+# 文件内普通函数
+def helper_function():  # 不需要self
+    print("这是辅助函数")
+
+# 静态方法
+class MyClass:
+    @staticmethod
+    def static_method():  # 不需要self
+        print("这是静态方法")

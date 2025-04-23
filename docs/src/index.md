@@ -4,6 +4,7 @@ layout: home
 
 hero:
   name: "Ly Learning Blog"
+  
   # text: "A VitePress Site"
   tagline: 个人学习记录
   # actions:
