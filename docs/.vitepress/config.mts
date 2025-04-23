@@ -15,9 +15,7 @@ export default defineConfig({
       // { text: 'Examples', link: '/markdown-examples' }
       {
         text: 'Python', items: [
-          { text: 'Learning', link: '/python/learning' },
-          { text: 'Item B', link: '/item-2' },
-          { text: 'Item C', link: '/item-3' }
+          { text: 'Learning', link: '/python/learning' }
         ]
       }
     ],
