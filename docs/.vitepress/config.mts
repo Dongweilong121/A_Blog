@@ -6,6 +6,7 @@ export default defineConfig({
   title: "Ly Learning Blog",
   description: "Ly Learning Blog",
   srcDir: 'src',
+  base: '/A_Blog/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: { light: '/images/LyLight.png', dark: '/images/LyDark.png' },
