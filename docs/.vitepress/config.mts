@@ -15,7 +15,6 @@ export default defineConfig({
     logo: { light: 'LyLight.png', dark: 'LyDark.png' },
     nav: [
       { text: '首页', link: '/' },
-      // { text: 'Examples', link: '/markdown-examples' }
       {
         text: 'Python',
         link: '/python/'
@@ -24,12 +23,12 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '基础',
+        text: 'Python基础',
         collapsed: false,
-
+        base: '/python/',
         items: [
-          { text: '基础语法', link: '/python/base' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '基础语法', link: 'base' },
+          { text: '函数随记', link: 'function' }
         ]
       }
     ],
