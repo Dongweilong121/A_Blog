@@ -28,7 +28,8 @@ export default defineConfig({
         base: '/python/',
         items: [
           { text: '基础语法', link: 'base' },
-          { text: '函数随记', link: 'function' }
+          { text: '函数随记', link: 'function' },
+          { text: '问题解决', link: 'problem' },
         ]
       }
     ],
