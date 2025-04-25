@@ -18,21 +18,32 @@ export default defineConfig({
       {
         text: 'Python',
         link: '/python/'
-      }
-    ],
-
-    sidebar: [
+      },
       {
-        text: 'Python基础',
-        collapsed: false,
-        base: '/python/',
+        text: '数据库',
         items: [
-          { text: '基础语法', link: 'base' },
-          { text: '函数随记', link: 'function' },
-          { text: '问题解决', link: 'problem' },
+          { text: 'MongoDB', link: '/db/mongodb/' },
+          { text: 'MySQL', link: '/db/mysql/' },
+          { text: 'Redis', link: '/db/redis/' },
         ]
       }
     ],
+
+    sidebar: {
+      '/python/': [
+        {
+          text: 'Python基础',
+          collapsed: false,
+          base: '/python/',
+          items: [
+            { text: '基础语法', link: 'base' },
+            { text: '函数随记', link: 'function' },
+            { text: '问题解决', link: 'problem' },
+          ]
+        }
+      ],
+      '/db/': []
+    }
     // aside: false,
 
     // socialLinks: [
