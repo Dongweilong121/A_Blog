@@ -98,6 +98,40 @@ class Product:
 # 使用
 book = Product("Python入门", 100)
 book.apply_discount(20)  # 打8折
+```
 
 
+## 推导式
+> 推导式(Comprehension)是Python中一种简洁高效的数据构造方式，可以快速生成列表、字典、集合等数据结构。推导式比传统的for循环更简洁，执行效率也更高。
+
+### 推导式类型
+- 列表推导式
+- 字典推导式
+- 集合推导式
+- 生成器表达式
+
+### 各种推导式的语法和示例
+#### 1. 列表推导式
+```python
+# 语法
+new_list = [expression for item in iterable if condition]
+# 示例
+squares = [x**2 for x in range(10)]  # 生成0到9的平方数列表
+print(squares)  # 输出: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+#### 2. 字典推导式
+```python
+# 语法
+new_dict = {key_expression: value_expression for item in iterable if condition}
+# 示例
+squares_dict = {x: x**2 for x in range(5)}  # 生成0到4的平方数字典
+print(squares_dict)  # 输出: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+```
+
+
+### 推导式的执行顺序
+1. **先执行for循环**,遍历iterable中的每个元素
+2. **执行if条件**,如果条件为True,则执行表达式
+3. **执行表达式**,将结果添加到新列表/字典/集合中
 

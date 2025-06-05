@@ -26,6 +26,13 @@ export default defineConfig({
           { text: 'MySQL', link: '/db/mysql/' },
           { text: 'Redis', link: '/db/redis/' },
         ]
+      },
+      {
+        text: "部署",
+        items: [
+          { text: "Docker", link: "/deploy/docker/" },
+          { text: "Docker Compose", link: "/deploy/docker-compose/" }
+        ]
       }
     ],
 
